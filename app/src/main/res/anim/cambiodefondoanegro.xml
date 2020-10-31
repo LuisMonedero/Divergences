@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <transition xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:drawable="@drawable/back_cocina_house" />
+        <item android:drawable="@drawable/back_negro" />
+    </transition>
+</set>
