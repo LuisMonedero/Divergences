@@ -21,17 +21,12 @@ class FragmentoOpciones : Fragment() {
     var texto2: String? = null
     var texto3: String? = null
 
-    //1//3
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        miView = LayoutInflater.from(getContext()).inflate(R.layout.fragmnt_opciones, null)
+        miView = LayoutInflater.from(context).inflate(R.layout.fragmnt_opciones, null)
         opcion1 = miView!!.findViewById(R.id.btn1)
         opcion2 = miView!!.findViewById(R.id.btn2)
         opcion3 = miView!!.findViewById(R.id.btn3)
@@ -40,8 +35,8 @@ class FragmentoOpciones : Fragment() {
         texto3 = arguments!!.getString("opcion3")
         println(texto1 + texto2 + texto3)
         if (texto3 == "") {
-            opcion3!!.setVisibility(View.INVISIBLE)
-            opcion3!!.setEnabled(false)
+            opcion3!!.visibility = View.INVISIBLE
+            opcion3!!.isEnabled = false
         }
         opcion1!!.text = texto1
         opcion2!!.text = texto2

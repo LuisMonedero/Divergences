@@ -1205,7 +1205,7 @@ class Teatro : AppCompatActivity(){
                     bundle!!.putString("opcion2", "Ir al instituto directamente.")
                     bundle!!.putString("opcion3", "")
                     fondoClicks!!.isEnabled = false
-                    opciones = supportFragmentManager.findFragmentByTag("misOpciones") as FragmentoOpciones
+                    opciones = supportFragmentManager.findFragmentByTag("misOpciones") as FragmentoOpciones?
                     opciones = FragmentoOpciones()
                     opciones!!.arguments = bundle
                     supportFragmentManager.beginTransaction().add(R.id.misOpciones, opciones!!, "misOpciones").commit()
@@ -1503,7 +1503,7 @@ class Teatro : AppCompatActivity(){
                         bundle!!.putString("opcion2", "Salir con Hajime y Nagito.")
                         bundle!!.putString("opcion3", "")
                     }
-                    opciones = supportFragmentManager.findFragmentByTag("misOpciones") as FragmentoOpciones
+                    opciones = supportFragmentManager.findFragmentByTag("misOpciones") as FragmentoOpciones?
                     opciones = FragmentoOpciones()
                     opciones!!.arguments = bundle
                     supportFragmentManager.beginTransaction().add(R.id.misOpciones, opciones!!, "misOpciones").commit()
